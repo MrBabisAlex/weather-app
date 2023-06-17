@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
+app.get("/", (req,res) =>{
+    res.render("weather-app.ejs")
+})
+
 app.get("/weather-app", (req,res) =>{
     res.render("weather-app.ejs")
 })
