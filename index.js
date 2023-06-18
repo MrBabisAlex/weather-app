@@ -32,7 +32,6 @@ app.post("/weather-app", (req, res) => {
         ApiKey +
         "&units=metric";
 
-        console.log(URL);
     https.get(URL, function (response) {
         response.on("data", function (data) {
             if (response.statusCode === 200) {
